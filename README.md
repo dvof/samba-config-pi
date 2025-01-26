@@ -2,7 +2,8 @@ Mount disk:
 sudo mount /dev/sda1 /mnt
 
 Setup samba, bottom of file:
-`sudo nano /etc/samba/smb.conf`
+`cp smb.conf /etc/samba/smb.conf`
+`sudo systemctl restart smbd`
 
 Optional:
 `sudo smbpasswd -a pi`
