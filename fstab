@@ -1,0 +1,14 @@
+proc            /proc           proc    defaults          0       0
+PARTUUID=0b3cdfa4-01  /boot/firmware  vfat    defaults          0       2
+PARTUUID=0b3cdfa4-02  /               ext4    defaults,noatime  0       1
+
+
+# SSD NAS Project
+# UUID=DEB5-DB3D /mnt/Downloads exfat defaults,auto,users,rw,nofail 0 0
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
+
+/dev/sda1 /mnt/Downloads exfat defaults,uid=1000,gid=1000,fmask=0000,dmask=0000 0 0
+
+# USB storage
+UUID=f00c5749-fe0b-49b3-8cf2-4dca1c5f751a /mnt1/docker-data ext4 defaults 0 2
